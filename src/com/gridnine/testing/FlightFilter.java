@@ -9,11 +9,12 @@ public class FlightFilter {
     private List<Flight> flights;
     private Map<String, Filter> rulesFiltration = new HashMap<>();
 
-    //метод для добавления правила фильтрации в набор правил
+    //метод для добавления правила фильтрации перелётов в набор правил
     public void addFilter(String description, Filter filter) {
         rulesFiltration.put(description, filter);
     }
 
+    //метод для получения набора правил фильтрации перелётов в виде множества строк(ключей)
     public Set<String> getRulesFiltration() {
         return rulesFiltration.keySet();
     }
